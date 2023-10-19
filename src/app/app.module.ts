@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
+
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RouterModule, Routes } from '@angular/router'; // Importa Routes
@@ -18,19 +21,27 @@ const routes: Routes = [
   {path: 'todo', component: TodoComponent}
 ];
 
+
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
+
+    DropdownComponent
+
     SignUpPageComponent,
     LoginPageComponent,
     HomePageComponent
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+
+
     FormsModule,
     RouterModule.forRoot(routes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
