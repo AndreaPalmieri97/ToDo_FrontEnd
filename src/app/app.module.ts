@@ -26,9 +26,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     TodoComponent,
-
-    DropdownComponent
-
+    DropdownComponent,
     SignUpPageComponent,
     LoginPageComponent,
     HomePageComponent
@@ -37,10 +35,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-
-
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
 
   ],
   providers: [],
