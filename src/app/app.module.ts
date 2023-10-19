@@ -35,10 +35,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-
-
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
 
   ],
   providers: [],
