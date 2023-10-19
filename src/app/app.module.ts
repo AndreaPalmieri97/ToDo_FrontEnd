@@ -26,9 +26,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     TodoComponent,
-
-    DropdownComponent
-
+    DropdownComponent,
     SignUpPageComponent,
     LoginPageComponent,
     HomePageComponent
