@@ -30,7 +30,7 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes) // Utilizza la matrice "routes" per definire le rotte
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
