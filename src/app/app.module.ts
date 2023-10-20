@@ -17,6 +17,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'signup', component: SignUpPageComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   {path: 'todo', component: TodoComponent}
 ];

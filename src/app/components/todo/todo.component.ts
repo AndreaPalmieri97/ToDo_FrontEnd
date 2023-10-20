@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Todo } from 'src/app/models/todo';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -12,17 +12,16 @@ const BASE_URL = "http://localhost:8080"
   styleUrls: ['./todo.component.css']
 })
 
-export class TodoComponent implements OnInit{
+export class TodoComponent {
 
   todos: Todo[] = [];
 
   token: string | null = localStorage.getItem('token');
 
-  ngOnInit(): void {
-    this.http.get<Todo[]>(`${BASE_URL}/todo`).subscribe((res: Todo[]) => this.todos = res )
-  }
+  active = false
 
   sendRequestWithCustomHeader() {
+    this.active = !this.active;
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.token,
     });
